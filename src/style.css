@@ -1,0 +1,238 @@
+:root {
+  --back-black: rgb(0, 0, 0, 0.65);
+  --back-slight-black: rgb(0, 0, 0, 0.45);
+  --font-color: white;
+  font-size: 62.5%;
+}
+
+/* most used font in this application */
+@font-face {
+  font-family: "MainFont";
+  src: url("./assets/roboto.ttf") format("ttf");
+}
+
+* {
+  margin: 0;
+  font-family: "Roboto Slab", cursive;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+/* wrapper Container */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  row-gap: 5em;
+  background: url("../src/assets/restaurant.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Header */
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--back-black);
+  color: var(--font-color);
+  gap: 0.5em;
+  font-size: 2em;
+  padding: 2% 0 15px 0;
+  border-bottom: 1px solid var(--font-color);
+}
+
+.buttons {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  color: var(--font-color);
+  padding: 10%;
+  background-color: transparent;
+  border-bottom: 2px solid transparent;
+  font-size: 1em;
+  transition: transform 0.4s;
+}
+
+.btn.active {
+  border-bottom: 2px solid var(--font-color);
+}
+
+.btn:hover {
+  transform: translateY(-10%);
+}
+
+/* Main Content */
+.main-content {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--back-slight-black);
+  color: var(--font-color);
+  padding: 4%;
+}
+
+/* Home */
+.home {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 4em;
+  animation: fadeIn 1.5s;
+}
+
+.homep {
+  font-size: 2em;
+  color: var(--font-color);
+}
+
+.home img {
+  width: 100%;
+  border-radius: 1em;
+}
+
+/* menu */
+.menu {
+  display: inline-grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 4rem;
+  animation: fadeIn 1.5s;
+}
+
+.item {
+  height: 300px;
+  padding: 5em;
+  background-color: var(--back-black);
+  cursor: pointer;
+  color: var(--font-color);
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.item:hover {
+  background-color: rgb(255, 255, 255, 0.25);
+  transition: all 0.5s;
+}
+
+.itemp {
+  font-size: 2em;
+}
+
+.name {
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.itemImg {
+  width: 50%;
+}
+
+/* Contact */
+.contact {
+  display: flex;
+  /* background-color: var(--back-black); */
+  color: var(--font-color);
+  flex-flow: column;
+  align-items: start;
+  justify-content: center;
+  gap: 2em;
+  animation: fadeIn 1.5s;
+}
+
+.contactp img {
+  width: 2em;
+}
+
+.contactp {
+  display: flex;
+  font-size: 2em;
+  gap: 5%;
+  /* text-align: center; */
+  color: var(--font-color);
+  align-items: center;
+  justify-content: start;
+}
+
+.britania {
+  width: 60vw;
+  cursor: move;
+}
+/* Footer */
+.footer {
+  width: calc(100% - 2em);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  background-color: var(--back-slight-black);
+  color: var(--font-color);
+}
+
+.footp {
+  font-size: 2em;
+}
+
+.git {
+  width: 2.5em;
+  padding: 0.4em;
+}
+
+.git:hover {
+  width: 3.3em;
+  padding: 0;
+  transform: rotate(360deg);
+  transition: all 0.4s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 700px) {
+  .menu {
+    grid-template-columns: 1fr;
+  }
+  .britania {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 430px) {
+  .home img {
+    width: 70%;
+  }
+  .itemImg {
+    width: 60%;
+  }
+}
