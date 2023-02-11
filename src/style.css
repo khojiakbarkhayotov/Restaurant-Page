@@ -13,7 +13,7 @@
 
 * {
   margin: 0;
-  font-family: "Roboto Slab", cursive;
+  font-family: "MainFont", cursive;
 }
 
 button {
@@ -229,9 +229,6 @@ button {
 }
 
 @media (max-width: 430px) {
-  .home img {
-    width: 70%;
-  }
   .itemImg {
     width: 60%;
   }
