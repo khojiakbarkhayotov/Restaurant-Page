@@ -36,6 +36,7 @@ button {
   background: url("../src/assets/restaurant.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 /* Header */
